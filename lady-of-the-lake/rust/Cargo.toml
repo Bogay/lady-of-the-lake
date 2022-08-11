@@ -1,0 +1,12 @@
+[package]
+name = "lady_of_the_lake"
+version = "0.1.0"
+authors = ["bogay <pojay11523@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+gdnative = "0.10.0"
+# gdnative = { path = "../../godot-rust/gdnative" }
