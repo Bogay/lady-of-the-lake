@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://scenes/drag_and_drop.gd" type="Script" id=1]
+[ext_resource path="res://script/drag_and_drop.gd" type="Script" id=1]
 
 [node name="DragAndDrop" type="Panel"]
 margin_left = 53.0

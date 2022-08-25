@@ -18,6 +18,11 @@ config/name="lady-of-the-lake"
 run/main_scene="res://scenes/game.tscn"
 config/icon="res://assets/godot-ferris-32x32.png"
 
+[display]
+
+window/size/height=768
+window/size/resizable=false
+
 [input]
 
 left_click={
