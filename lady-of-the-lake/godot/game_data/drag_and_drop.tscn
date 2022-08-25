@@ -3,10 +3,11 @@
 [ext_resource path="res://script/drag_and_drop.gd" type="Script" id=1]
 
 [node name="DragAndDrop" type="Panel"]
-margin_left = 53.0
-margin_top = 48.0
-margin_right = 242.0
-margin_bottom = 135.0
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -36.0
+margin_top = -39.0
+margin_right = 39.0
+margin_bottom = 38.0
 script = ExtResource( 1 )
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

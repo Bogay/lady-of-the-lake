@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://sprite/lake-background.png" type="Texture" id=1]
 [ext_resource path="res://sprite/white-square.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://font/default.tres" type="DynamicFont" id=4]
 [ext_resource path="res://sprite/goddess/cry.png" type="Texture" id=5]
 [ext_resource path="res://sprite/game-scene-background.png" type="Texture" id=6]
+[ext_resource path="res://game_data/drag_and_drop.tscn" type="PackedScene" id=7]
+[ext_resource path="res://sprite/menu/axe.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 3 )
@@ -18,168 +20,8 @@ margin_top = -384.0
 margin_right = 512.0
 margin_bottom = 384.0
 
-[node name="ItemList" type="TextureRect" parent="MainContentContainer"]
-margin_right = 204.0
-margin_bottom = 768.0
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.5
-texture = ExtResource( 6 )
-expand = true
-stretch_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MainContentContainer/ItemList"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 8.0
-margin_top = 8.0
-margin_right = -8.0
-margin_bottom = -8.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Title" type="Label" parent="MainContentContainer/ItemList/VBoxContainer"]
-margin_right = 188.0
-margin_bottom = 24.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 4 )
-text = "Item"
-valign = 1
-
-[node name="ItemGrid" type="VBoxContainer" parent="MainContentContainer/ItemList/VBoxContainer"]
-margin_top = 28.0
-margin_right = 188.0
-margin_bottom = 508.0
-size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid"]
-margin_right = 188.0
-margin_bottom = 117.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Background" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer"]
-modulate = Color( 0.796078, 0.32549, 0.32549, 1 )
-margin_right = 60.0
-margin_bottom = 117.0
-size_flags_horizontal = 3
-texture = ExtResource( 2 )
-
-[node name="Background2" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer"]
-modulate = Color( 0.796078, 0.32549, 0.32549, 1 )
-margin_left = 64.0
-margin_right = 124.0
-margin_bottom = 117.0
-size_flags_horizontal = 3
-texture = ExtResource( 2 )
-
-[node name="Background3" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer"]
-modulate = Color( 0.796078, 0.32549, 0.32549, 1 )
-margin_left = 128.0
-margin_right = 188.0
-margin_bottom = 117.0
-size_flags_horizontal = 3
-texture = ExtResource( 2 )
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid"]
-margin_top = 121.0
-margin_right = 188.0
-margin_bottom = 238.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Background" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer2"]
-modulate = Color( 0.796078, 0.32549, 0.32549, 1 )
-margin_right = 60.0
-margin_bottom = 117.0
-size_flags_horizontal = 3
-texture = ExtResource( 2 )
-
-[node name="Background2" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer2"]
-modulate = Color( 0.796078, 0.32549, 0.32549, 1 )
-margin_left = 64.0
-margin_right = 124.0
-margin_bottom = 117.0
-size_flags_horizontal = 3
-texture = ExtResource( 2 )
-
-[node name="Background3" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer2"]
-modulate = Color( 0.796078, 0.32549, 0.32549, 1 )
-margin_left = 128.0
-margin_right = 188.0
-margin_bottom = 117.0
-size_flags_horizontal = 3
-texture = ExtResource( 2 )
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid"]
-margin_top = 242.0
-margin_right = 188.0
-margin_bottom = 359.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Background" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer3"]
-modulate = Color( 0.796078, 0.32549, 0.32549, 1 )
-margin_right = 60.0
-margin_bottom = 117.0
-size_flags_horizontal = 3
-texture = ExtResource( 2 )
-
-[node name="Background2" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer3"]
-modulate = Color( 0.796078, 0.32549, 0.32549, 1 )
-margin_left = 64.0
-margin_right = 124.0
-margin_bottom = 117.0
-size_flags_horizontal = 3
-texture = ExtResource( 2 )
-
-[node name="Background3" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer3"]
-modulate = Color( 0.796078, 0.32549, 0.32549, 1 )
-margin_left = 128.0
-margin_right = 188.0
-margin_bottom = 117.0
-size_flags_horizontal = 3
-texture = ExtResource( 2 )
-
-[node name="HBoxContainer4" type="HBoxContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid"]
-margin_top = 363.0
-margin_right = 188.0
-margin_bottom = 480.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Background" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer4"]
-modulate = Color( 0.796078, 0.32549, 0.32549, 1 )
-margin_right = 60.0
-margin_bottom = 117.0
-size_flags_horizontal = 3
-texture = ExtResource( 2 )
-
-[node name="Background2" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer4"]
-modulate = Color( 0.796078, 0.32549, 0.32549, 1 )
-margin_left = 64.0
-margin_right = 124.0
-margin_bottom = 117.0
-size_flags_horizontal = 3
-texture = ExtResource( 2 )
-
-[node name="Background3" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer4"]
-modulate = Color( 0.796078, 0.32549, 0.32549, 1 )
-margin_left = 128.0
-margin_right = 188.0
-margin_bottom = 117.0
-size_flags_horizontal = 3
-texture = ExtResource( 2 )
-
-[node name="NinePatchRect" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer"]
-margin_top = 512.0
-margin_right = 188.0
-margin_bottom = 752.0
-size_flags_vertical = 3
-
 [node name="Background" type="TextureRect" parent="MainContentContainer"]
-margin_left = 208.0
-margin_right = 1024.0
+margin_right = 816.0
 margin_bottom = 768.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
@@ -271,3 +113,322 @@ size_flags_horizontal = 3
 texture = ExtResource( 5 )
 expand = true
 stretch_mode = 5
+
+[node name="ItemList" type="TextureRect" parent="MainContentContainer"]
+margin_left = 820.0
+margin_right = 1024.0
+margin_bottom = 768.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContentContainer/ItemList"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="MainContentContainer/ItemList/VBoxContainer"]
+margin_right = 188.0
+margin_bottom = 24.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Item"
+valign = 1
+
+[node name="ItemGrid" type="VBoxContainer" parent="MainContentContainer/ItemList/VBoxContainer"]
+margin_top = 28.0
+margin_right = 188.0
+margin_bottom = 508.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid"]
+margin_right = 188.0
+margin_bottom = 157.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Background" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+margin_right = 60.0
+margin_bottom = 157.0
+mouse_filter = 1
+size_flags_horizontal = 3
+texture = ExtResource( 2 )
+
+[node name="DragAndDrop" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer/Background" instance=ExtResource( 7 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer/Background/DragAndDrop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Background2" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+margin_left = 64.0
+margin_right = 124.0
+margin_bottom = 157.0
+mouse_filter = 1
+size_flags_horizontal = 3
+texture = ExtResource( 2 )
+
+[node name="DragAndDrop" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer/Background2" instance=ExtResource( 7 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer/Background2/DragAndDrop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Background3" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+margin_left = 128.0
+margin_right = 188.0
+margin_bottom = 157.0
+mouse_filter = 1
+size_flags_horizontal = 3
+texture = ExtResource( 2 )
+
+[node name="DragAndDrop" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer/Background3" instance=ExtResource( 7 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer/Background3/DragAndDrop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid"]
+margin_top = 161.0
+margin_right = 188.0
+margin_bottom = 318.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Background" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer5"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+margin_right = 60.0
+margin_bottom = 157.0
+mouse_filter = 1
+size_flags_horizontal = 3
+texture = ExtResource( 2 )
+
+[node name="DragAndDrop" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer5/Background" instance=ExtResource( 7 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer5/Background/DragAndDrop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Background2" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer5"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+margin_left = 64.0
+margin_right = 124.0
+margin_bottom = 157.0
+mouse_filter = 1
+size_flags_horizontal = 3
+texture = ExtResource( 2 )
+
+[node name="DragAndDrop" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer5/Background2" instance=ExtResource( 7 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer5/Background2/DragAndDrop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Background3" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer5"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+margin_left = 128.0
+margin_right = 188.0
+margin_bottom = 157.0
+mouse_filter = 1
+size_flags_horizontal = 3
+texture = ExtResource( 2 )
+
+[node name="DragAndDrop" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer5/Background3" instance=ExtResource( 7 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer5/Background3/DragAndDrop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid"]
+margin_top = 322.0
+margin_right = 188.0
+margin_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Background" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer6"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+margin_right = 60.0
+margin_bottom = 158.0
+mouse_filter = 1
+size_flags_horizontal = 3
+texture = ExtResource( 2 )
+
+[node name="DragAndDrop" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer6/Background" instance=ExtResource( 7 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer6/Background/DragAndDrop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Background2" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer6"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+margin_left = 64.0
+margin_right = 124.0
+margin_bottom = 158.0
+mouse_filter = 1
+size_flags_horizontal = 3
+texture = ExtResource( 2 )
+
+[node name="DragAndDrop" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer6/Background2" instance=ExtResource( 7 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer6/Background2/DragAndDrop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Background3" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer6"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+margin_left = 128.0
+margin_right = 188.0
+margin_bottom = 158.0
+mouse_filter = 1
+size_flags_horizontal = 3
+texture = ExtResource( 2 )
+
+[node name="DragAndDrop" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer6/Background3" instance=ExtResource( 7 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/HBoxContainer6/Background3/DragAndDrop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer"]
+margin_top = 512.0
+margin_right = 188.0
+margin_bottom = 752.0
+size_flags_vertical = 3
