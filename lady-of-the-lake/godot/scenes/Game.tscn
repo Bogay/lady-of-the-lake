@@ -11,6 +11,6 @@ script = ExtResource( 1 )
 current = true
 
 [node name="Menu" parent="." instance=ExtResource( 2 )]
+visible = false
 
 [node name="Lake" parent="." instance=ExtResource( 3 )]
-visible = false
