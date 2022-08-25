@@ -10,7 +10,7 @@ script = ExtResource( 1 )
 [node name="Camera" type="Camera2D" parent="."]
 current = true
 
-[node name="Node2D" parent="." instance=ExtResource( 2 )]
+[node name="Menu" parent="." instance=ExtResource( 2 )]
 
 [node name="Lake" parent="." instance=ExtResource( 3 )]
 visible = false
