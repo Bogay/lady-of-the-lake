@@ -1,6 +1,6 @@
 # Inspired by: https://www.youtube.com/watch?v=I7QYAiSEqOo
 # Thanks to endritDev - Yellow Hat Games
-
+class_name DragAndDrop
 extends Panel
 
 const CLICK_ACTION = 'left_click'
@@ -11,6 +11,9 @@ var clickPosition = Vector2.ZERO
 
 func _ready():
 	originalPosition = get_position()
+	assert(connect('mouse_entered', self, '_on_mouse_entered') == OK)
+	assert(connect('mouse_exited', self, '_on_mouse_exited') == OK)
+
 
 func _physics_process(_delta):
 	if Input.is_action_just_pressed(CLICK_ACTION) and dragReady:
