@@ -23,8 +23,8 @@ func _physics_process(_delta):
 	if Input.is_action_pressed(CLICK_ACTION) and dragReady:
 		set_position(get_global_mouse_position() + offset)
 	if Input.is_action_just_released(CLICK_ACTION) and dragReady:
-		# TODO: emit a signal
 		set_position(originalPosition)
+		emit_signal("dropped")
 
 func _on_mouse_entered():
 	print('Mouse entered. node=%s' % name)

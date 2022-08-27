@@ -21,6 +21,7 @@ func _ready():
 	# So run it once on ready is enough
 	sync_collision_shape()
 	add_to_group(ITEM_BLOCK_GROUP)
+	assert(connect('dropped', self, '_on_item_dropped') == OK)
 
 func sync_collision_shape():
 	var shape = collision_shape.shape as RectangleShape2D
@@ -29,3 +30,9 @@ func sync_collision_shape():
 	var y = rect_size.y / 2
 	shape.extents = Vector2(x, y)
 	collision_shape.position = Vector2(x, y)
+
+func _on_item_dropped():
+	if fill_item.trigger == null:
+		return
+	# TODO: combine item and trigger, play story
+	print('Trigger. item=%s, trigger=%s' % [_item.keyword, fill_item.trigger.name])
