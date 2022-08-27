@@ -6,7 +6,6 @@ onready var text: Label = $Text
 
 var _player_selection: PlayerSelection
 var _stories: StoryList
-var prev_story: Story
 
 func _ready():
 	_player_selection = player_selection
@@ -14,12 +13,14 @@ func _ready():
 	_stories = stories
 	assert(_stories != null)
 	assert(text != null)
-	
-func _process(_delta):
-	# TODO: use signal
-	var story = _stories.get_story(_player_selection.index)
+	assert(_player_selection.connect(
+		'selection_changed',
+		self,
+		'_on_player_selection_changed'
+	) == OK)
+	_on_player_selection_changed(_player_selection.index)
+
+func _on_player_selection_changed(index: int):
+	var story = _stories.get_story(index)
 	assert(story != null)
-	if story == prev_story:
-		return
 	text.text = story.description.replace('{{}}', ' ___ ')
-	prev_story = story

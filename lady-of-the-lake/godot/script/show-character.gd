@@ -15,11 +15,20 @@ func _ready():
 	assert(_player_selection != null)
 	_stories = stories
 	assert(collision_shape != null)
+
+	# TODO: move this to somewhere belong to `StoryList`
 	randomize()
 	stories.shuffle()
 
-func _process(_delta):
-	var story = _stories.get_story(player_selection.index)
+	assert(_player_selection.connect(
+		'selection_changed',
+		self,
+		'_on_player_selection_changed'
+	) == OK)
+	_on_player_selection_changed(_player_selection.index)
+
+func _on_player_selection_changed(index: int):
+	var story = _stories.get_story(index)
 	assert(story != null)
 	texture = story.character_sprite
 	sync_collision_shape()

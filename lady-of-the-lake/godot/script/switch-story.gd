@@ -17,10 +17,10 @@ func _ready():
 
 func _left_pressed():
 	print('Select left')
-	_player_selection.index -= 1
-	_player_selection.index = (_player_selection.index + 9) % 9
-	
+	var index = _player_selection.index
+	_player_selection.index = ((index - 1) + 9) % 9
+
 func _right_pressed():
 	print('Select right')
-	_player_selection.index += 1
-	_player_selection.index %= 9
+	var index = _player_selection.index
+	_player_selection.index = (index + 1) % 9
