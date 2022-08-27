@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource( 1 )
 character_sprite = ExtResource( 2 )
-description = ""
+description = "Bogay 今天的午餐是一盤炒麵，可是它還缺了一味，需要加點{{}}在上面"
 introduction = ""

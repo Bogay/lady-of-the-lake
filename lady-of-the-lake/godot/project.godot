@@ -47,7 +47,7 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "StoryList",
 "language": "GDScript",
-"path": "res://script/character-list.gd"
+"path": "res://script/story-list.gd"
 } ]
 _global_script_class_icons={
 "DragAndDrop": "",
