@@ -3,6 +3,8 @@
 class_name DragAndDrop
 extends Panel
 
+signal dropped()
+
 const CLICK_ACTION = 'left_click'
 var dragReady = false
 var originalPosition = Vector2.ZERO
@@ -13,7 +15,6 @@ func _ready():
 	originalPosition = get_position()
 	assert(connect('mouse_entered', self, '_on_mouse_entered') == OK)
 	assert(connect('mouse_exited', self, '_on_mouse_exited') == OK)
-
 
 func _physics_process(_delta):
 	if Input.is_action_just_pressed(CLICK_ACTION) and dragReady:

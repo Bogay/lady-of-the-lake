@@ -6,16 +6,18 @@ signal item_exited(item)
 
 const ITEM_TRIGGER_GROUP = 'triggered_by_item'
 # Should be `Item`
-export(Resource) var item
+export(Resource) var item setget set_item
 
 var trigger: Area2D
 var _item: Item
 
 func _ready():
-	_item = item as Item
-	assert(item != null)
 	assert(connect('area_entered', self, '_on_area_entered') == OK)
 	assert(connect('area_exited', self, '_on_area_exited') == OK)
+
+func set_item(it: Resource):
+	_item = it as Item
+	assert(_item != null)
 
 func _on_area_entered(area: Area2D):
 	print('Area entered. this=%s, other=%s' % [name, area.name])
