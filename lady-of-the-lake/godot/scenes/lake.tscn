@@ -1,16 +1,31 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://sprite/lake-background.png" type="Texture" id=1]
 [ext_resource path="res://sprite/white-square.png" type="Texture" id=2]
 [ext_resource path="res://font/Noto_Sans_TC/NotoSansTC-Regular.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://font/default.tres" type="DynamicFont" id=4]
-[ext_resource path="res://sprite/goddess/cry.png" type="Texture" id=5]
+[ext_resource path="res://sprite/goddess/idle.png" type="Texture" id=5]
 [ext_resource path="res://sprite/game-scene-background.png" type="Texture" id=6]
+[ext_resource path="res://sprite/item/002-lumberjack.png" type="Texture" id=7]
+[ext_resource path="res://game_data/item/002-lumberjack.tres" type="Resource" id=8]
 [ext_resource path="res://scenes/show-character.tscn" type="PackedScene" id=9]
+[ext_resource path="res://sprite/item/001-hero.png" type="Texture" id=10]
 [ext_resource path="res://sprite/character/007-mao.png" type="Texture" id=11]
-[ext_resource path="res://game_data/item/001-hero.tres" type="Resource" id=13]
+[ext_resource path="res://game_data/item/003-maid.tres" type="Resource" id=12]
+[ext_resource path="res://sprite/item/003-maid.png" type="Texture" id=13]
 [ext_resource path="res://scenes/item-block.tscn" type="PackedScene" id=14]
-[ext_resource path="res://sprite/character/001-hero.png" type="Texture" id=15]
+[ext_resource path="res://game_data/item/004-girl.tres" type="Resource" id=15]
+[ext_resource path="res://game_data/item/005-bogay.tres" type="Resource" id=16]
+[ext_resource path="res://game_data/item/006-robot.tres" type="Resource" id=17]
+[ext_resource path="res://game_data/item/007-mao.tres" type="Resource" id=18]
+[ext_resource path="res://game_data/item/008-duck.tres" type="Resource" id=19]
+[ext_resource path="res://game_data/item/009-princess.tres" type="Resource" id=20]
+[ext_resource path="res://sprite/item/004-girl.png" type="Texture" id=21]
+[ext_resource path="res://sprite/item/005-bogay.png" type="Texture" id=22]
+[ext_resource path="res://sprite/item/006-robot.png" type="Texture" id=23]
+[ext_resource path="res://sprite/item/007-mao.png" type="Texture" id=24]
+[ext_resource path="res://sprite/item/008-duck.png" type="Texture" id=25]
+[ext_resource path="res://sprite/item/009-princess.png" type="Texture" id=26]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 3 )
@@ -160,8 +175,7 @@ custom_styles/panel = SubResource( 3 )
 [node name="ItemBlock" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row0/Col0" instance=ExtResource( 14 )]
 margin_right = 80.0
 margin_bottom = 117.0
-item_texture = ExtResource( 15 )
-item = ExtResource( 13 )
+item_texture = ExtResource( 10 )
 
 [node name="Col1" type="PanelContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row0"]
 self_modulate = Color( 1, 1, 1, 0.784314 )
@@ -175,8 +189,8 @@ custom_styles/panel = SubResource( 3 )
 [node name="ItemBlock" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row0/Col1" instance=ExtResource( 14 )]
 margin_right = 80.0
 margin_bottom = 117.0
-item_texture = ExtResource( 15 )
-item = ExtResource( 13 )
+item_texture = ExtResource( 7 )
+item = ExtResource( 8 )
 
 [node name="Col2" type="PanelContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row0"]
 self_modulate = Color( 1, 1, 1, 0.784314 )
@@ -190,8 +204,8 @@ custom_styles/panel = SubResource( 3 )
 [node name="ItemBlock" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row0/Col2" instance=ExtResource( 14 )]
 margin_right = 81.0
 margin_bottom = 117.0
-item_texture = ExtResource( 15 )
-item = ExtResource( 13 )
+item_texture = ExtResource( 13 )
+item = ExtResource( 12 )
 
 [node name="Row1" type="HBoxContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid"]
 margin_top = 121.0
@@ -211,8 +225,8 @@ custom_styles/panel = SubResource( 3 )
 [node name="ItemBlock" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row1/Col0" instance=ExtResource( 14 )]
 margin_right = 80.0
 margin_bottom = 117.0
-item_texture = ExtResource( 15 )
-item = ExtResource( 13 )
+item_texture = ExtResource( 21 )
+item = ExtResource( 15 )
 
 [node name="Col1" type="PanelContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row1"]
 self_modulate = Color( 1, 1, 1, 0.784314 )
@@ -226,8 +240,8 @@ custom_styles/panel = SubResource( 3 )
 [node name="ItemBlock" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row1/Col1" instance=ExtResource( 14 )]
 margin_right = 80.0
 margin_bottom = 117.0
-item_texture = ExtResource( 15 )
-item = ExtResource( 13 )
+item_texture = ExtResource( 22 )
+item = ExtResource( 16 )
 
 [node name="Col2" type="PanelContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row1"]
 self_modulate = Color( 1, 1, 1, 0.784314 )
@@ -241,8 +255,8 @@ custom_styles/panel = SubResource( 3 )
 [node name="ItemBlock" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row1/Col2" instance=ExtResource( 14 )]
 margin_right = 81.0
 margin_bottom = 117.0
-item_texture = ExtResource( 15 )
-item = ExtResource( 13 )
+item_texture = ExtResource( 23 )
+item = ExtResource( 17 )
 
 [node name="Row2" type="HBoxContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid"]
 margin_top = 242.0
@@ -262,8 +276,8 @@ custom_styles/panel = SubResource( 3 )
 [node name="ItemBlock" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row2/Col0" instance=ExtResource( 14 )]
 margin_right = 80.0
 margin_bottom = 118.0
-item_texture = ExtResource( 15 )
-item = ExtResource( 13 )
+item_texture = ExtResource( 24 )
+item = ExtResource( 18 )
 
 [node name="Col1" type="PanelContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row2"]
 self_modulate = Color( 1, 1, 1, 0.784314 )
@@ -277,8 +291,8 @@ custom_styles/panel = SubResource( 3 )
 [node name="ItemBlock" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row2/Col1" instance=ExtResource( 14 )]
 margin_right = 80.0
 margin_bottom = 118.0
-item_texture = ExtResource( 15 )
-item = ExtResource( 13 )
+item_texture = ExtResource( 25 )
+item = ExtResource( 19 )
 
 [node name="Col2" type="PanelContainer" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row2"]
 self_modulate = Color( 1, 1, 1, 0.784314 )
@@ -292,8 +306,8 @@ custom_styles/panel = SubResource( 3 )
 [node name="ItemBlock" parent="MainContentContainer/ItemList/VBoxContainer/ItemGrid/Row2/Col2" instance=ExtResource( 14 )]
 margin_right = 81.0
 margin_bottom = 118.0
-item_texture = ExtResource( 15 )
-item = ExtResource( 13 )
+item_texture = ExtResource( 26 )
+item = ExtResource( 20 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="MainContentContainer/ItemList/VBoxContainer"]
 margin_top = 392.0
