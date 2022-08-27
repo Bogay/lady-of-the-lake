@@ -3,15 +3,23 @@ extends TextureRect
 
 # Should be `PlayerSelection`
 export(Resource) var player_selection
+export(Array, Resource) var stories
 
 onready var collision_shape: CollisionShape2D = $Area2D/CollisionShape2D
 
+var _player_selection: PlayerSelection
+
 func _ready():
-	assert(player_selection != null)
-	assert(player_selection is PlayerSelection)
+	_player_selection = player_selection
+	assert(_player_selection != null)
 	assert(collision_shape != null)
+	randomize()
+	stories.shuffle()
 
 func _process(_delta):
+	var story: Story = stories[player_selection.index]
+	assert(story != null)
+	texture = story.character_sprite
 	sync_collision_shape()
 
 func sync_collision_shape():
