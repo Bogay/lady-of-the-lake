@@ -8,8 +8,56 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Panel",
+"class": "DragAndDrop",
+"language": "GDScript",
+"path": "res://script/drag_and_drop.gd"
+}, {
+"base": "Area2D",
+"class": "FillItem",
+"language": "GDScript",
+"path": "res://script/fill-item.gd"
+}, {
+"base": "Resource",
+"class": "Item",
+"language": "GDScript",
+"path": "res://script/item.gd"
+}, {
+"base": "DragAndDrop",
+"class": "ItemBlock",
+"language": "GDScript",
+"path": "res://script/item-block.gd"
+}, {
+"base": "Resource",
+"class": "PlayerSelection",
+"language": "GDScript",
+"path": "res://script/player-selection.gd"
+}, {
+"base": "TextureRect",
+"class": "ShowCharacter",
+"language": "GDScript",
+"path": "res://script/show-character.gd"
+}, {
+"base": "Resource",
+"class": "Story",
+"language": "GDScript",
+"path": "res://script/story.gd"
+}, {
+"base": "Resource",
+"class": "StoryList",
+"language": "GDScript",
+"path": "res://script/character-list.gd"
+} ]
 _global_script_class_icons={
+"DragAndDrop": "",
+"FillItem": "",
+"Item": "",
+"ItemBlock": "",
+"PlayerSelection": "",
+"ShowCharacter": "",
+"Story": "",
+"StoryList": ""
 }
 
 [application]
