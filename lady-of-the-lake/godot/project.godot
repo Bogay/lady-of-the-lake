@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "ClickToClose",
+"language": "GDScript",
+"path": "res://script/click-to-close.gd"
+}, {
 "base": "Panel",
 "class": "DragAndDrop",
 "language": "GDScript",
@@ -60,6 +65,7 @@ _global_script_classes=[ {
 "path": "res://script/story-list.gd"
 } ]
 _global_script_class_icons={
+"ClickToClose": "",
 "DragAndDrop": "",
 "FillItem": "",
 "Item": "",
