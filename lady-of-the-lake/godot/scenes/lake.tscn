@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://sprite/story-background/lake-background.png" type="Texture" id=1]
+[ext_resource path="res://sprite/story-background/lake.png" type="Texture" id=1]
 [ext_resource path="res://sprite/white-square.png" type="Texture" id=2]
 [ext_resource path="res://GUI/title.tres" type="DynamicFont" id=3]
 [ext_resource path="res://script/item-list.gd" type="Script" id=4]

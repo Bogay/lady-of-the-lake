@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GUI/ending-story.tres" type="DynamicFont" id=1]
+[ext_resource path="res://script/result-story.gd" type="Script" id=2]
+[ext_resource path="res://sprite/item/001-hero.png" type="Texture" id=3]
+[ext_resource path="res://sprite/character/002-lumberjack.png" type="Texture" id=4]
+[ext_resource path="res://game_data/item/009-princess.tres" type="Resource" id=6]
+[ext_resource path="res://sprite/story-background/forest.png" type="Texture" id=7]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+item = ExtResource( 6 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 7
+
+[node name="Description" type="PanelContainer" parent="."]
+self_modulate = Color( 1, 1, 1, 0.501961 )
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 32.0
+margin_top = 32.0
+margin_right = -32.0
+margin_bottom = -32.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Description"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 953.0
+margin_bottom = 313.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Description/MarginContainer"]
+margin_right = 946.0
+margin_bottom = 306.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 1 )
+text = "「嗨吼~嗨吼~」樵夫開心的拎著__踏上歸途。
+只要有了__，砍倒這個巨大藤蔓絕不是難事。"
+
+[node name="Lumberjack" type="TextureRect" parent="."]
+margin_left = 754.0
+margin_top = 487.0
+margin_right = 941.0
+margin_bottom = 752.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="Item" type="TextureRect" parent="."]
+margin_left = 690.0
+margin_top = 552.0
+margin_right = 807.0
+margin_bottom = 695.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6

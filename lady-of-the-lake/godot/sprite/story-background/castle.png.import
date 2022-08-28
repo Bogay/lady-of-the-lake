@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lake-background.png-6d3f44c813354b1ed8666a0a923faa8a.stex"
+path="res://.import/castle.png-326e274b0f5e2633718e8e0184f66605.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/story-background/lake-background.png"
-dest_files=[ "res://.import/lake-background.png-6d3f44c813354b1ed8666a0a923faa8a.stex" ]
+source_file="res://sprite/story-background/castle.png"
+dest_files=[ "res://.import/castle.png-326e274b0f5e2633718e8e0184f66605.stex" ]
 
 [params]
 
