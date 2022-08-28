@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://GUI/ending-story.tres" type="DynamicFont" id=1]
 [ext_resource path="res://script/result-story.gd" type="Script" id=2]
 [ext_resource path="res://sprite/item/001-hero.png" type="Texture" id=3]
 [ext_resource path="res://sprite/character/002-lumberjack.png" type="Texture" id=4]
+[ext_resource path="res://game_data/item/002-lumberjack.tres" type="Resource" id=5]
 [ext_resource path="res://game_data/item/009-princess.tres" type="Resource" id=6]
 [ext_resource path="res://sprite/story-background/forest.png" type="Texture" id=7]
 
@@ -16,6 +17,7 @@ margin_right = -512.0
 margin_bottom = -394.0
 script = ExtResource( 2 )
 item = ExtResource( 6 )
+expected_item = ExtResource( 5 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0

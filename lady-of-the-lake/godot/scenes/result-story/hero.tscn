@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GUI/ending-story.tres" type="DynamicFont" id=1]
 [ext_resource path="res://script/result-story.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://sprite/character/001-hero.png" type="Texture" id=5]
 [ext_resource path="res://game_data/item/009-princess.tres" type="Resource" id=6]
 [ext_resource path="res://sprite/story-background/castle.png" type="Texture" id=7]
+[ext_resource path="res://game_data/item/001-hero.tres" type="Resource" id=8]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -17,6 +18,7 @@ margin_right = -512.0
 margin_bottom = -394.0
 script = ExtResource( 2 )
 item = ExtResource( 6 )
+expected_item = ExtResource( 8 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0

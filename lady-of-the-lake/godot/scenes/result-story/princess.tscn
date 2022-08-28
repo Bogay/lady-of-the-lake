@@ -16,6 +16,7 @@ margin_right = -512.0
 margin_bottom = -394.0
 script = ExtResource( 2 )
 item = ExtResource( 6 )
+expected_item = ExtResource( 6 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
