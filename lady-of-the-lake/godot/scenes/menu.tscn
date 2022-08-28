@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://sprite/menu/background.png" type="Texture" id=1]
 [ext_resource path="res://scenes/menu-lady.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/menu-axe-button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprite/UI/exit.png" type="Texture" id=4]
+[ext_resource path="res://sprite/UI/start.png" type="Texture" id=5]
+[ext_resource path="res://script/menu.gd" type="Script" id=6]
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -66,9 +69,58 @@ tracks/4/keys = {
 "update": 0,
 "values": [ -40.0 ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("Quit/Label:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Start/Label:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Quit/Label:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 199, 88 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Quit/Label:rect_size")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 232, 103 ) ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "drop"
+length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Quit:rect_position")
 tracks/0/interp = 1
@@ -117,8 +169,57 @@ tracks/3/keys = {
 "update": 0,
 "values": [ -40.0, 0.0 ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Quit/Label:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Start/Label:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Quit/Label:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 199, 88 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Quit/Label:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 232, 103 ) ]
+}
 
 [node name="Menu" type="Node2D"]
+script = ExtResource( 6 )
 
 [node name="Background" type="TextureRect" parent="."]
 margin_left = -512.0
@@ -147,9 +248,29 @@ margin_right = -19.0
 margin_bottom = 317.0
 rect_rotation = -36.9084
 
+[node name="Label" type="TextureRect" parent="Buttons/Quit"]
+visible = false
+margin_left = 199.0
+margin_top = 88.0
+margin_right = 431.0
+margin_bottom = 191.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
 [node name="Start" parent="Buttons" instance=ExtResource( 3 )]
 margin_left = -474.0
 margin_top = -894.0
 margin_right = -17.0
 margin_bottom = -691.0
 rect_rotation = -40.0
+
+[node name="Label" type="TextureRect" parent="Buttons/Start"]
+visible = false
+margin_left = 205.0
+margin_top = 90.0
+margin_right = 424.0
+margin_bottom = 187.0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
