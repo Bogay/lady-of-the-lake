@@ -325,5 +325,4 @@ margin_right = 242.0
 margin_bottom = 348.0
 size_flags_vertical = 1
 theme = ExtResource( 31 )
-text = "令人好奇內容的情書"
 autowrap = true
