@@ -18,7 +18,7 @@ func _ready():
 		self,
 		'_on_player_selection_changed'
 	) == OK)
-	_on_player_selection_changed(_player_selection.index)
+	call_deferred('_on_player_selection_changed', _player_selection.index)
 
 func _on_player_selection_changed(index: int):
 	var story = _stories.get_story(index)
