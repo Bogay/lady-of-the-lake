@@ -8,3 +8,4 @@ script = ExtResource( 1 )
 character_sprite = ExtResource( 2 )
 description = "明天就要出發去月球了，但bogay卻一臉悶悶不樂，肯定是遺落了什麼重要的工具吧?"
 introduction = ""
+key = "bogay"

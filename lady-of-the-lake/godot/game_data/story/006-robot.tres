@@ -8,3 +8,4 @@ script = ExtResource( 1 )
 character_sprite = ExtResource( 2 )
 description = "嘰嘰...自律機器人對於背上搔癢難耐而感到苦惱，暴走之前得想個辦法"
 introduction = ""
+key = "robot"

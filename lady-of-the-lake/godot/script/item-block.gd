@@ -13,12 +13,14 @@ onready var fill_item = $FillItem
 
 var _item: Item
 var player_selection: PlayerSelection = preload('res://game_data/player-selection.tres')
+var stories: StoryList = preload('res://game_data/story/story-list.tres')
 
 func _ready():
 	_item = item as Item
 	assert(_item != null)
 	fill_item.item = _item
 	item_renderer.texture = _item.texture
+	assert(stories != null)
 	# The size should not change in runtime
 	# So run it once on ready is enough
 	sync_collision_shape()
@@ -40,6 +42,12 @@ func _on_item_dropped():
 		return
 	# TODO: combine item and trigger, play story
 	print('Trigger. item=%s, trigger=%s' % [_item.keyword, fill_item.trigger.name])
+	var story = stories.get_story(player_selection.index)
+	var result_story: PackedScene = load('res://scenes/result-story/%s.tscn' % story.key)
+	assert(result_story != null)
+	var result_story_ins: ResultStory = result_story.instance()
+	result_story_ins.item = _item
+	get_tree().get_root().add_child(result_story_ins)
 
 func _on_item_hovered():
 	print('Item hovered. item=%s' % _item.keyword)

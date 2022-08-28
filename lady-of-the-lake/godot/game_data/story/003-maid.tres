@@ -8,3 +8,4 @@ script = ExtResource( 1 )
 character_sprite = ExtResource( 2 )
 description = "哎呀哎呀這邊刷刷，恩恩那邊掃掃，要是沒把公主房間打掃乾淨，就別想拿到這個月的薪水了"
 introduction = ""
+key = "maid"

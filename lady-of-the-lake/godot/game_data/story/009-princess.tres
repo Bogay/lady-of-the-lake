@@ -8,3 +8,4 @@ script = ExtResource( 1 )
 character_sprite = ExtResource( 2 )
 description = "嗚嗚，遺落了這個，我要去哪回憶我的愛呢?"
 introduction = ""
+key = "princess"

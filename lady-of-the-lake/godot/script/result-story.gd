@@ -1,3 +1,4 @@
+class_name ResultStory
 extends Control
 
 export(Resource) var item
