@@ -1,7 +1,11 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://script/item.gd" type="Script" id=1]
+[ext_resource path="res://sprite/item/001-hero.png" type="Texture" id=2]
 
 [resource]
 script = ExtResource( 1 )
 keyword = "劍"
+item_name = ""
+description = "鋒利的寶劍，很適合拿來單挑，似乎還有著女神的加護"
+texture = ExtResource( 2 )

@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource( 1 )
 character_sprite = ExtResource( 2 )
-description = ""
+description = "世界陷入危機，現在正是勇者挺身而出的時機，但似乎弄丟了一個關鍵的東西...?"
 introduction = ""

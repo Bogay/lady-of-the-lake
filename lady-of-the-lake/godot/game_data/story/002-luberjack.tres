@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource( 1 )
 character_sprite = ExtResource( 2 )
-description = ""
+description = "家裡還有一家四口要養，這位樵夫看起來因為弄丟某個生財工具而感到十分困擾"
 introduction = ""

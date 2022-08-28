@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource( 1 )
 character_sprite = ExtResource( 2 )
-description = ""
+description = "呱，呱呱呱呱，呱呱...呱?"
 introduction = ""

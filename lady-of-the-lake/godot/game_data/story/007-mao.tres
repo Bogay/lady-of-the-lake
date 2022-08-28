@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource( 1 )
 character_sprite = ExtResource( 2 )
-description = ""
+description = "我的天，明天勇者要來，我得好好的招待他...但我的寶具呢?"
 introduction = ""
