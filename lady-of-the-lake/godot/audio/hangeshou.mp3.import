@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hangeshou.mp3-2c71c69e251391e02773c810e11009cb.mp3str"
+
+[deps]
+
+source_file="res://audio/hangeshou.mp3"
+dest_files=[ "res://.import/hangeshou.mp3-2c71c69e251391e02773c810e11009cb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

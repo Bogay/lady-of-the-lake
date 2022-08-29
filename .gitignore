@@ -36,3 +36,5 @@ target/
 tramp
 .import
 bin/
+# Assets from http://azidaya.blog.jp/ cannot be redistributed
+hangeshou.mp3
